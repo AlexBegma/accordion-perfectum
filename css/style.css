@@ -131,7 +131,8 @@ li{
 	}
 
 	.accordion__text li {
-		padding-left: 20px;
+		margin-left: 20px;
+		padding-left: 15px;
 		position: relative;
 	}
 
@@ -185,8 +186,8 @@ li{
 
 	.accordion__list:hover .accordion__slide:hover .accordion__slide-link * {
 		opacity: 1;
-		-webkit-transform: translateX(0);
-		transform: translateX(0);
+		/* -webkit-transform: translateX(0);
+		transform: translateX(0); */
 	}
 
 
@@ -196,6 +197,8 @@ li{
 	}
 
 	.reviews__block {
+		width: 1280px;
+		width: 100%;
 		display: flex;
 		flex-direction: row;
 	}
@@ -229,7 +232,7 @@ li{
 		font-size: 12px;
 		letter-spacing: 1px;
 		line-height: 26px;
-		color: #ffffff;
+		color: #fff;
 		font-weight: 700;
 		text-align: center;
 		background-color: #1c7fff;
@@ -242,18 +245,49 @@ li{
 		border: 1px solid #1c7fff;
 	}
 
+	.read button:focus {
+		color: #fff;
+		background-color: red;
+		border: 1px solid red;
+		outline: none;
+	}
+
 	.reviews__logos {
 		width: 66%;
 		display: flex;
 		flex-wrap: wrap;
+		justify-content: space-between;
 	}
 
 	.reviews__logos-image {
-		width: 270px;
+		width: 210px;
 		height: 120px;
 		justify-content: center;
 	}
 
-	.reviews__logos-image img {
-		
+	.reviews__logos-image:hover {
+		background-color: #2afcb3;
 	}
+
+
+
+
+	@media screen and (max-width: 992px) {
+		body {
+			margin: 0;
+		}
+
+		.accordion {
+			height: auto;
+		}
+
+
+		@media screen and (max-width: 992px) {
+
+		}
+
+
+
+		@media screen and (max-width: 992px) {
+
+		}
