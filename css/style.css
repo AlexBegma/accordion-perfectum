@@ -67,6 +67,23 @@ li{
 	transform: skew(-10deg, 0);
 }
 
+.text-over {
+	position: absolute;
+	top: 50%;
+	left: -30%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	font-size: 67px;
+	line-height: 40px;
+	color: #808080;
+	font-weight: 900;
+	transform: rotate(-88deg);
+}
+
+.accordion__list:hover .accordion__slide:hover .text-over {
+	display: none;
+}
+
 .accordion__list .accordion__slide-link {
 	display: block;
 	height: 680px;
@@ -288,7 +305,6 @@ li{
 	cursor: pointer;
 	max-width: 220px;
 	width: 100%;
-	margin-bottom: 10px;
 }
 
 .reviews__logos {
@@ -304,8 +320,4 @@ li{
 	display: flex;
 	justify-content: center;
 	align-items: center;
-}
-
-.reviews__logos-image:hover {
-	background-color: #2afcb3;
 }
