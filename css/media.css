@@ -1,12 +1,16 @@
 @media screen and (max-width: 992px) {
 
-	.accordion__list .accordion__slide-link {
+	.accordion__list:hover .accordion__slide:hover .accordion__slide-link {
 		transform: skew(0);
 	}
 
-	.accordion__list:hover .accordion__slide:hover .accordion__slide-link {
-		padding: 100px 0px 200px 55px;
+	.accordion__list .accordion__slide {
 		transform: skew(0);
+	}
+
+	.accordion__list .accordion__slide-link {
+		transform: skew(0);
+		padding: 100px 20px 200px 55px;
 	}
 
 	.accordion__slide-link h2 {
@@ -28,12 +32,19 @@
 		width: 40%;
 	}
 
+	.reviews__text p {
+		font-size: 14px;
+		line-height: 23px;
+		font-weight: 400;
+		margin-bottom: 25px;
+	}
+
 	.reviews__logos {
 		width: 60%;
 	}
 
 	.reviews__logos-image {
-		width: 167px;
+		width: 180px;
 	}
 
 	.read {
@@ -72,19 +83,78 @@
 	.form-popup {
 		display: none;
 		position: fixed;
-		bottom: 95px;
-		left: 215px;
+		bottom: 0;
+		left: 0;
 		border: 3px solid #f1f1f1;
 		z-index: 9;
-		max-width: 160px;
-		width: 100%;
+		max-width: 100%;
 	}
 }
 
-@media screen and (max-width: 870px) {
+@media screen and (max-width: 820px) {
 
+	.accordion__list .accordion__slide-link {
+		padding: 100px 20px 200px 15px;
+	}
+
+	.accordion__text li {
+		max-width: 305px;
+		width: 100%;
+	}
+
+	.popup-container {
+		flex-direction: column;
+		max-width: 233px;
+	}
+
+	.popup-container .slide-name {
+		background-color: #4CAF50;
+		color: #fff;
+		padding: 5px 5px;
+		margin: 0 0 10px 0;
+		text-align: center;
+		border: none;
+		cursor: pointer;
+		max-width: 220px;
+		width: 100%;
+	}
+
+	.cancel {
+		margin-right: 0;
+	}
+
+	.reviews__text h2 {
+		margin-bottom: 20px;
+	}
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 630px) {
 
+	.reviews__logos {
+		width: 66%;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+}
+
+@media screen and (max-width: 576px) {
+
+	.reviews {
+		padding: 0 0 95px;
+	}
+
+	.reviews__block {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.reviews__text h2 {
+		font-size: 35px;
+		font-weight: 700;
+		line-height: 35px;
+		margin-bottom: 20px;
+	}
 }
