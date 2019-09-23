@@ -64,9 +64,10 @@ li{
 	background-position: center center;
 	background-repeat: no-repeat;
 	transition: all .4s ease;
+	transform: skew(-10deg, 0);
 }
 
-.accordion__slide-link {
+.accordion__list .accordion__slide-link {
 	display: block;
 	height: 680px;
 	width: 100%;
@@ -76,22 +77,16 @@ li{
 	color: #fff;
 	text-decoration: none;
 	transition: all 200ms ease;
-	padding: 100px 0px 200px 55px;
+	padding: 100px 0px 200px 155px;
+	transform: skew(10deg, 0);
 }
 
 .accordion__slide-link * {
 	opacity: 0;
 	margin: 0;
 	width: 100%;
-	/* text-overflow: ellipsis; */
 	position: relative;
 	z-index: 5;
-	/* white-space: nowrap;
-	overflow: hidden;
-	-webkit-transform: translateX(-20px);
-	transform: translateX(-20px);
-	-webkit-transition: all 400ms ease;
-	transition: all 400ms ease; */
 }
 
 .accordion__slide-link h2 {
@@ -163,23 +158,21 @@ li{
 }
 
 .accordion__list:hover .accordion__slide {
-	width: 15%;
+	width: 10%;
 }
 
 .accordion__list:hover .accordion__slide:hover {
-	width: 40%;
+	width: 45%;
+	background: #fff;
 }
 
 .accordion__list:hover .accordion__slide:hover .accordion__slide-link {
-	background: #fff;
-	opacity: .8;
+	transform: skew(10deg, 0);
 }
 
 .accordion__list:hover .accordion__slide:hover .accordion__slide-link * {
 	opacity: 1;
 }
-
-
 
 .reviews {
 	padding: 55px 0px 95px;
@@ -257,44 +250,41 @@ li{
 .form-popup {
 	display: none;
 	position: fixed;
-	bottom: 145px;
-	left: 300px;
+	bottom: 0;
+	left: 0;
 	border: 3px solid #f1f1f1;
 	z-index: 9;
-	max-width: 160px;
+	max-width: auto;
 	width: 100%;
 }
 
 .popup-container {
 	padding: 6px;
 	background-color: #fff;
+	display: flex;
+	flex-direction: row;
 }
 
 .popup-container .slide-name {
 	background-color: #4CAF50;
 	color: #fff;
 	padding: 5px 5px;
+	margin: 0 5px;
 	text-align: center;
 	border: none;
 	cursor: pointer;
 	width: 100%;
-	opacity: 0.8;
 }
 
-.popup-container .cancel {
+.cancel {
 	background-color: red;
 	color: #fff;
 	padding: 5px 10px;
+	margin-right: 5px;
 	border: none;
 	cursor: pointer;
 	width: 100%;
-	opacity: 0.8;
 }
-
-.popup-container .cansel:hover, .open-button:hover {
-	opacity: 1;
-}
-
 
 .reviews__logos {
 	width: 66%;
@@ -317,6 +307,15 @@ li{
 
 
 @media screen and (max-width: 992px) {
+
+	.accordion__list .accordion__slide-link {
+		transform: skew(0);
+	}
+
+	.accordion__list:hover .accordion__slide:hover .accordion__slide-link {
+		padding: 100px 0px 200px 55px;
+		transform: skew(0);
+	}
 
 	.accordion__slide-link h2 {
 		font-size: 25px;
